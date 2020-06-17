@@ -1,3 +1,7 @@
+/**child of State.
+ * one choice of the status of TV
+ * @author Dongyu
+ */
 import java.util.ArrayList;
 
 public class HuluState implements State{

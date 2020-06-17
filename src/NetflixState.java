@@ -1,5 +1,8 @@
+/**child of State.
+ * one choice of the status of TV
+ * @author Dongyu
+ */
 import java.util.ArrayList;
-
 public class NetflixState implements State{
 	private TV tv;
 	private ArrayList<String> movies;

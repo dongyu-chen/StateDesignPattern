@@ -1,4 +1,7 @@
-
+/**child of State.
+ * one choice of the status of TV
+ * @author Dongyu
+ */
 public class HomeState implements State {
 	private TV tv;
 	public HomeState(TV tv) {
