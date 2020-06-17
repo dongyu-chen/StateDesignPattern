@@ -1,0 +1,58 @@
+import java.util.ArrayList;
+
+public class HuluState implements State{
+	private TV tv;
+	private ArrayList<String> movies = new ArrayList<String>();
+	private ArrayList<String> tvs = new ArrayList<String>();
+	public HuluState(TV tv) {
+		this.tv = tv;
+		movies.add("m1");
+		movies.add("m2");
+		movies.add("m3");
+		movies.add("m4");
+		movies.add("m5");
+		tvs.add("tv1");
+		tvs.add("tv2");
+		tvs.add("tv3");
+		tvs.add("tv4");
+		tvs.add("tv5");
+
+	}
+	
+	@Override
+	public void pressHomeButton() {
+		System.out.println("Loading the Home Screen...");
+		tv.setState(tv.getHomeState());
+	}
+	
+	@Override
+	public void pressNetflixButton() {
+		System.out.println("Loading Netflix...");
+		tv.setState(tv.getNetflixState());
+	}
+	
+	@Override
+	public void pressHuluButton() {
+		System.out.println("We are already in Hulu");
+	}
+	
+	@Override
+	public void pressMovieButton() {
+		System.out.println("Hulu Movies:");		
+		for(int i = 0; i < movies.size(); i++) {
+			System.out.print(movies.get(i) + " ");
+		}
+		System.out.println();
+	}
+	
+	@Override
+	public void pressTVButton() {
+		System.out.println("Hulu TV Shows:");		
+		for(int i = 0; i < tvs.size(); i++) {
+			System.out.print(tvs.get(i) + " ");
+		}
+		System.out.println();
+		
+	}
+
+}
